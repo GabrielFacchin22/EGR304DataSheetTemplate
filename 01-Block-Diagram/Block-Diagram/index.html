@@ -26,7 +26,7 @@
 
     
       
-        <title>Individal Block Diagram - EGR 304 Data Sheet Template</title>
+        <title>Individual Block Diagram - EGR 304 Data Sheet Template</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Individal Block Diagram
+              Individual Block Diagram
             
           </span>
         </div>
@@ -471,7 +471,7 @@
           
   
   <span class="md-ellipsis">
-    Individal Block Diagram
+    Individual Block Diagram
   </span>
   
 
@@ -482,7 +482,7 @@
         
   
   <span class="md-ellipsis">
-    Individal Block Diagram
+    Individual Block Diagram
   </span>
   
 
@@ -511,9 +511,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-block-diagram" class="md-nav__link">
+  <a href="#motor-board-block-diagram" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Block Diagram
+      Motor Board Block Diagram
     </span>
   </a>
   
@@ -809,9 +809,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-block-diagram" class="md-nav__link">
+  <a href="#motor-board-block-diagram" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Block Diagram
+      Motor Board Block Diagram
     </span>
   </a>
   
@@ -840,21 +840,15 @@
   
 
 
-  <h1>Individal Block Diagram</h1>
+  <h1>Individual Block Diagram</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This needs to be updated with a brief purpose for having the block diagram.
-Things to mention are:
-* power levels
-* sensor
-* Actuator
-* team connections
-* Power source
-* ...</p>
-<p>To get some initial formatting help, one can view <a href="https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/">"here"</a> some basic techniques.</p>
-<h2 id="example-block-diagram">Example Block Diagram</h2>
-<p>Showing an example of how to import a screenshot of the block diagram created outside of git and brought into a page.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../individual-block-diagram.png" data-desc-position="bottom"><img alt="Example of Indivial Block diagram " src="../individual-block-diagram.png"></a></p>
+<p>The block diagram shows the main electrical components and signal connections for the GripRx motor board. It identifies the power sources, microcontroller inputs and outputs, actuator control, limit switches, and the interface with the Force Board.</p>
+<p>The system uses a Microchip PIC18F57Q43 Curiosity Nano as the main microcontroller. Two Omron D2F-01L limit switches provide the home and end position signals to digital inputs RD2 and RD3. The PIC controls the Texas Instruments DRV8871DDAR H-Bridge Driver using a PWM signal from RB3 and a direction signal from RD1. The H-Bridge drives the DFRobot FIT0492-A gear motor.</p>
+<p>The motor side is powered by a 9 V, 3 A power supply. A 5 V linear regulator is included for the regulated 5 V supply. Communication with the Force Board is provided through connector J1 using UART, FORCE_OK, FORCE_ANA, and ground connections.</p>
+<h2 id="motor-board-block-diagram">Motor Board Block Diagram</h2>
+<p>The completed block diagram for the GripRx motor board is shown below.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../block-diagram.png" data-desc-position="bottom"><img alt="GripRx Motor Board Block Diagram" src="../block-diagram.png"></a></p>
 
 
 
